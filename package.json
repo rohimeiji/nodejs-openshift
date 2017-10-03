@@ -1,0 +1,38 @@
+{
+  "name": "NodeJS Rochim Eiji",
+  "version": "1.0.0",
+  "description": "NodeJS Rochim Eiji",
+  "engines": {
+    "node": "6.11.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "ejs": "2.5.6",
+    "express": "4.15.2",
+    "request": "^2.81.0",
+    "cheerio": "1.0.0-rc.2",
+    "memory-cache": "0.2.0",
+    "flat-cache": "1.2.1",
+    "include": "0.1.2",
+    "mathjs": "3.10.0",
+    "node-telegram-bot-api": "0.24.0",
+    "socket.io": "1.3.5",
+    "tough-cookie-filestore": "0.0.1",
+    "cron": "1.0.9",
+    "body-parser": "1.17.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-getting-started"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}

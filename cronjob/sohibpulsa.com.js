@@ -5,7 +5,7 @@ var request 	= require('request');
 * Cron job
 */
 new CronJob('0 * * * * *', function(){
-	request('http://php-rochimeiji.rhcloud.com/');
+	request('https://php-rochimeiji.herokuapp.com');
 },true,"Asia/Jakarta");
 new CronJob('0 * * * * *', function(){
 	request('https://sohibpulsa.com/cronjob/auto_deposit');

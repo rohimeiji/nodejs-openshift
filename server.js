@@ -22,7 +22,7 @@ if(!host){
 	process.env.cachename = "rochimeiji";
 }else{
 	process.env.local = true;
-	process.env.baseurl = "http://nodejs-rochimeiji.rhcloud.com";
+	process.env.baseurl = "http://nodejs-rochimeiji.herokuapp.com";
 	process.env.spurl = "https://sohibpulsa.com";
 	process.env.cachename = "rochimeiji";
 }
@@ -91,7 +91,7 @@ app.post('/social-search', function (req, res) {
 				keyv = keyv.replace("#", "");
 			}
 			if(keyv.indexOf(" ") != -1) keyv = '"'+keyv+'"';
-			request({uri:'http://php-rochimeiji.rhcloud.com/socialsearch/?'+sc+'='+encodeURIComponent(keyv),sc:sc,key:key}, function(err, rs, body){
+			request({uri:'http://php-rochimeiji.herokuapp.com/socialsearch/?'+sc+'='+encodeURIComponent(keyv),sc:sc,key:key}, function(err, rs, body){
 				// if(this.sc == "ig") res.send(body);
 				request({
 					method: 'POST',

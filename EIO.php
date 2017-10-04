@@ -1,6 +1,6 @@
 <?php
 class EIO{
-	var $websocket = "http://nodejs-rochimeiji.rhcloud.com:8000/";
+	var $websocket = "http://nodejs-rochimeiji.herokuapp.com:8000/";
 	var $app_user = "pub";
 	var $app_secret = "12345";
 	var $channel = "c0083b8246f171cf7820aac1686d182d6b7fb83b";

@@ -27,9 +27,8 @@ if(!host){
 	process.env.cachename = "rochimeiji";
 }
 
-app.set('port', (process.env.PORT || 5000));
-// app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 8000);
-// app.set('ipaddr', process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
+app.set('ipaddr', process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
+app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 5000);
 
 // Listen Port
 server.listen(app.get('port'), app.get('ipaddr'));
@@ -136,8 +135,7 @@ app.all('/:user', function (req, res) {
 /*=====================================
 == Cron Job
 =======================================*/
-include('cronjob/lingkar9.com.js');
-include('cronjob/sohibpulsa.com.js');
-// include('cronjob/ift.js');
+require('./cronjob/lingkar9.com');
+require('./cronjob/sohibpulsa.com');
 
 console.log('Server run on '+app.get('ipaddr')+":"+app.get("port"));

@@ -14,21 +14,13 @@ var CronJob 	= require('cron').CronJob;
 var include 	= require('include');
 
 // Set Configuration
-var host = process.env.OPENSHIFT_NODEJS_IP;
-if(!host){
-	process.env.local = true;
-	process.env.baseurl = "http://localhost:8000";
-	process.env.spurl = "http://sp-new.local";
-	process.env.cachename = "rochimeiji";
-}else{
-	process.env.local = true;
-	process.env.baseurl = "http://nodejs-rochimeiji.herokuapp.com";
-	process.env.spurl = "https://sohibpulsa.com";
-	process.env.cachename = "rochimeiji";
-}
+process.env.local = true;
+process.env.baseurl = "http://nodejs-rochimeiji.herokuapp.com";
+process.env.spurl = "https://sohibpulsa.com";
+process.env.cachename = "rochimeiji";
 
 app.set('ipaddr', process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
-app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 5000);
+app.set('port', process.env.PORT || 5000);
 
 // Listen Port
 server.listen(app.get('port'), app.get('ipaddr'));

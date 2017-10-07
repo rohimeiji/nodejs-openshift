@@ -19,7 +19,7 @@ process.env.baseurl = "http://nodejs-rochimeiji.herokuapp.com";
 process.env.spurl = "https://sohibpulsa.com";
 process.env.cachename = "rochimeiji";
 
-app.set('ipaddr', process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
+// app.set('ipaddr', process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
 app.set('port', process.env.PORT || 5000);
 
 // Listen Port

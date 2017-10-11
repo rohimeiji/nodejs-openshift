@@ -7,6 +7,9 @@ var request 	= require('request');
 new CronJob('0 * * * * *', function(){
 	request('http://php-rochimeiji.herokuapp.com');
 },true,"Asia/Jakarta");
+new CronJob('0 */10 * * * *', function(){
+	request('http://nodejs-rochimeiji.herokuapp.com/');
+},true,"Asia/Jakarta");
 new CronJob('0 * * * * *', function(){
 	request('https://sohibpulsa.com/cronjob/auto_deposit');
 	request('https://sohibpulsa.com/cronjob/pending_api2');
